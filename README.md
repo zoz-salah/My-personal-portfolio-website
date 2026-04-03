@@ -10,8 +10,7 @@ This portfolio showcases my projects, skills, and journey in tech 💻✨
 ## 🌐 Live Demo
 
 🔗 **Check out the website here:**
-👉 https://github.com/zoz-salah/My-personal-portfolio-website
-
+👉 [CLICK HERE TO VIEW THE WEBSITE](https://zoz-salah.github.io/My-personal-portfolio-website/)
 ---
 
 ## 🧠 About Me
