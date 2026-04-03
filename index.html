@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ziad Salah — CS Student & AI Enthusiast</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION BAR
+       ============================================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <!-- ✏️ EDIT: Change "ZS" to your initials or your logo image -->
+      <a href="#hero" class="nav-logo">ZS<span class="dot">.</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Hamburger button (mobile only) -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO SECTION
+       ============================================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-text" aria-hidden="true">ZIAD</div>
+
+    <div class="hero-content">
+      <!-- 📸 PHOTO: Replace the div below with:
+           <img src="your-photo.jpg" alt="Ziad Salah" class="hero-avatar" />
+           Make sure your photo file is in the same folder as index.html -->
+      <div class="hero-avatar placeholder-avatar">
+        <!-- Your photo goes here -->
+       <img src="my_photo.jpg" alt="Ziad Salah" class="hero-avatar">
+      </div>
+
+      <div class="hero-text">
+        <!-- ✏️ EDIT: This is your name — change if needed -->
+        <p class="hero-tag">Hello, I'm</p>
+        <h1 class="hero-name">ZOZ <span class="accent">SALAH</span></h1>
+        <!-- ✏️ EDIT: Change the tagline below to something that describes you best -->
+        <p class="hero-tagline">CS Student · Applied AI · Builder</p>
+        <p class="hero-sub">
+          <!-- ✏️ EDIT: Short intro sentence about yourself (1–2 lines max) -->
+          Motivated AI student at Benha National University,
+          passionate about AI & machine learning and building things that matter.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View My Work</a>
+          <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT SECTION
+       ============================================================ -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="section-label">01 — About Me</div>
+      <div class="about-grid">
+
+        <div class="about-left">
+          <h2 class="section-title">Who I Am</h2>
+          <p class="about-text">
+            <!-- ✏️ EDIT: Write a paragraph about yourself here.
+                 Example topics: your passion, your background, what drives you. -->
+            I'm a second-year Computer Science student at Benha National University,
+            ranked among the top 10 students with a GPA of 3.66. I'm focused on
+            applied AI and machine learning — not just using libraries, but
+            understanding the math and building things from scratch.
+          </p>
+          <p class="about-text">
+            <!-- ✏️ EDIT: Add a second paragraph if you like — hobbies, goals, etc. -->
+            Beyond code, I've built a tech community of 350K+ followers online,
+            which taught me how to communicate complex ideas simply and visually.
+            I bring that same clarity to everything I build.
+          </p>
+
+          <div class="about-stats">
+            <!-- ✏️ EDIT: Change numbers/labels to match your achievements -->
+            <div class="stat">
+              <span class="stat-num">3.66</span>
+              <span class="stat-label">GPA</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">350K++</span>
+              <span class="stat-label">Followers</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">From The Top 10</span>
+              <span class="stat-label">in my Class</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-right">
+          <h3 class="skills-title">Technical Skills</h3>
+          <div class="skills-group">
+            <div class="skill-category">
+              <span class="skill-cat-label">Languages</span>
+              <!-- ✏️ EDIT: Add/remove skills as needed -->
+              <div class="skill-tags">
+                <span class="tag">C++</span>
+                <span class="tag">Python</span>
+                <span class="tag">SQL</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <span class="skill-cat-label">Libraries & Frameworks</span>
+              <div class="skill-tags">
+                <span class="tag">PyTorch</span>
+                <span class="tag">NumPy</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">Matplotlib</span>
+                <span class="tag">Seaborn</span>
+                <span class="tag">Tkinter</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <span class="skill-cat-label">Algorithms</span>
+              <div class="skill-tags">
+                <span class="tag">Linear Regression</span>
+                <span class="tag">Logistic Regression</span>
+                <span class="tag">Sorting & Searching</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <span class="skill-cat-label">Tools</span>
+              <div class="skill-tags">
+                <span class="tag">Git & GitHub</span>
+                <span class="tag">VS Code</span>
+                <span class="tag">Jupyter Lab</span>
+                <span class="tag">Oracle</span>
+                <span class="tag">Photoshop</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       EXPERIENCE SECTION
+       ============================================================ -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section-label">02 — Experience</div>
+      <h2 class="section-title">What I've Done</h2>
+
+      <div class="timeline">
+
+        <!-- EXPERIENCE ITEM 1 -->
+        <div class="timeline-item" data-animate>
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <!-- ✏️ EDIT: Job title -->
+              <h3 class="timeline-role">Creative Content Creator</h3>
+              <!-- ✏️ EDIT: Company / Platform name -->
+              <span class="timeline-company">Online — Tech Community</span>
+            </div>
+            <!-- ✏️ EDIT: Date range -->
+            <span class="timeline-date">Ongoing</span>
+            <ul class="timeline-bullets">
+              <!-- ✏️ EDIT: Bullet points describing what you did -->
+              <li>Built a tech-focused online community of <strong>350K+ followers</strong>.</li>
+              <li>Simplified complex technical concepts for a broad audience through visual storytelling.</li>
+              <li>Demonstrated consistency, audience engagement, and creative communication.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- EXPERIENCE ITEM 2 -->
+        <div class="timeline-item" data-animate>
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-header">
+              <!-- ✏️ EDIT: Job title -->
+              <h3 class="timeline-role">Graphic Designer & Video Editor</h3>
+              <!-- ✏️ EDIT: Company / Platform name -->
+              <span class="timeline-company">Freelance / Personal Projects</span>
+            </div>
+            <!-- ✏️ EDIT: Date range -->
+            <span class="timeline-date">Freelance</span>
+            <ul class="timeline-bullets">
+              <li>Designed visual content and edited videos using Adobe Photoshop and editing tools.</li>
+              <li>Transformed complex ideas into clear, professional visual formats.</li>
+              <li>Developed strong visual communication and structured presentation skills.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- ✏️ ADD MORE: Copy a timeline-item block above to add more experiences -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PROJECTS SECTION
+       ============================================================ -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-label">03 — Projects</div>
+      <h2 class="section-title">Things I've Built</h2>
+
+      <div class="projects-grid">
+
+        <!-- PROJECT CARD 1 -->
+        <div class="project-card" data-animate>
+          <!-- 📸 PROJECT IMAGE: Replace the div below with an <img> tag
+               Example: <img src="project1.png" alt="ML Roadmap screenshot" class="project-img" /> -->
+          <div class="project-img-placeholder">
+            <!-- Replace with: <img src="ml-roadmap.png" alt="ML Roadmap" class="project-img"> -->
+            <img src="ml_roadmab.png" alt="ML Roadmap" class="project-img">
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <!-- ✏️ EDIT: Tech stack tags -->
+              <span class="tag tag-sm">Python</span>
+              <span class="tag tag-sm">NumPy</span>
+              <span class="tag tag-sm">Machine Learning</span>
+            </div>
+            <!-- ✏️ EDIT: Project name -->
+            <h3 class="project-title">ML Roadmap — From Scratch</h3>
+            <!-- ✏️ EDIT: Project description (2–3 sentences) -->
+            <p class="project-desc">
+              Documented a full machine learning journey from mathematical foundations
+              to working implementations. Built Linear Regression, Logistic Regression,
+              and Neural Networks from scratch using only NumPy — no high-level libraries.
+            </p>
+            <div class="project-links">
+              <!-- ✏️ EDIT: Replace # with your actual GitHub link -->
+              <a href="https://github.com/zoz-salah/My-ML-Journey" target="_blank" class="project-link">GitHub →</a>
+              <!-- ✏️ EDIT: Add a live demo link if available, otherwise remove this line -->
+              <!-- <a href="#" target="_blank" class="project-link">Live Demo →</a> -->
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 2 -->
+        <div class="project-card" data-animate>
+          <div class="project-img-placeholder">
+            <img src="graph_datastruct.png" alt="Data Structures" class="project-img">
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag tag-sm">C++</span>
+              <span class="tag tag-sm">OOP</span>
+              <span class="tag tag-sm">Algorithms</span>
+            </div>
+            <h3 class="project-title">Data Structures Implementation</h3>
+            <p class="project-desc">
+              Implemented core data structures from scratch in C++: arrays, linked lists,
+              stacks, queues, trees, and graphs — including traversal algorithms.
+              Focused on clean OOP design and algorithmic clarity.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/zoz-salah/Graph-DATA-STRUCTRE-Implementation-in-C-" target="_blank" class="project-link">GitHub →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 3 -->
+        <div class="project-card" data-animate>
+          <div class="project-img-placeholder">
+            <img src="hotel.png" alt="Hotel Management System" class="project-img">
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag tag-sm">C++</span>
+              <span class="tag tag-sm">OOP</span>
+              <span class="tag tag-sm">File Handling</span>
+            </div>
+            <h3 class="project-title">Hotel Management System</h3>
+            <p class="project-desc">
+              Console-based hotel management system built in C++. Applied OOP concepts
+              like classes, encapsulation, and file I/O to manage hotel operations
+              efficiently.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/zoz-salah/Hotel-Management-System" target="_blank" class="project-link">GitHub →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT CARD 4 -->
+        <div class="project-card" data-animate>
+          <div class="project-img-placeholder">
+            <img src="tkinter.png" alt="Tkinter GUI Apps" class="project-img">
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag tag-sm">Python</span>
+              <span class="tag tag-sm">Tkinter</span>
+              <span class="tag tag-sm">GUI</span>
+            </div>
+            <h3 class="project-title">GUI Applications — Tkinter</h3>
+            <p class="project-desc">
+              Built a set of desktop apps with Python and Tkinter: a To-Do List app,
+              a basic calculator, and a creative calculator with interactive audio features.
+            </p>
+            <div class="project-links">
+              <a href="https://github.com/zoz-salah/simple--singing-calculator--python-" target="_blank" class="project-link">GitHub →</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- ✏️ ADD MORE: Copy a project-card block above to add more projects -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT SECTION
+       ============================================================ -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-label">04 — Contact</div>
+      <h2 class="section-title">Let's Talk</h2>
+      <p class="contact-intro">
+        <!-- ✏️ EDIT: Change this invitation message -->
+        Whether you have a project idea, a research opportunity, or just want to connect —
+        my inbox is always open.
+      </p>
+
+      <div class="contact-grid">
+
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <div class="contact-item">
+            <span class="contact-icon">✉</span>
+            <div>
+              <span class="contact-label">Email</span>
+              <!-- ✏️ EDIT: Replace with your actual email -->
+              <a href="mailto:zoz.salah2222@gmail.com" class="contact-val">zoz.salah2222@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📞</span>
+            <div>
+              <span class="contact-label">Phone</span>
+              <!-- ✏️ EDIT: Replace with your phone number or remove this block -->
+              <a href="tel:+201288488630" class="contact-val">+20 128 848 8630</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🔗</span>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <!-- ✏️ EDIT: Replace with your LinkedIn URL -->
+              <a href="https://linkedin.com/in/zoz-salah-111207z" target="_blank" class="contact-val">linkedin.com/in/zoz-salah-111207z</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">🐙</span>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <!-- ✏️ EDIT: Replace with your GitHub URL -->
+              <a href="https://github.com/zoz-salah" target="_blank" class="contact-val">github.com/zoz-salah</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📍</span>
+            <div>
+              <span class="contact-label">Location</span>
+              <!-- ✏️ EDIT: Change location if needed -->
+              <span class="contact-val">Benha, Egypt</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <form class="contact-form" id="contactForm" action="https://formspree.io/f/maqlpqdj"method="POST">
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Mo Salah" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="mo.salah@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Hey Ziad, I'd like to..." required></textarea>
+          </div>
+          <div class="glow-card-inner">
+    <div class="timeline-card">
+ <button type="submit" class="btn btn-primary btn-full">Send Message</button>    </div>
+  </div>
+</div>
+          <p class="form-note" id="formNote"></p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <!-- ✏️ EDIT: Update the year automatically — this is fine as-is -->
+      <p class="footer-copy">© <span id="year"></span> Ziad Salah. All rights reserved.</p>
+      <div class="footer-links">
+        <!-- ✏️ EDIT: Add/remove social links as needed -->
+        <a href="https://github.com/zoz-salah" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/zoz-salah-111207z" target="_blank">LinkedIn</a>
+        <a href="mailto:zoz.salah2222@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
