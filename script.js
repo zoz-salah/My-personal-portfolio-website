@@ -127,10 +127,10 @@ animatables.forEach(el => observer.observe(el));
 
 // ─── CUSTOM CURSOR (smooth trailing dot) ───────────────────
 (function() {
-  // Check if user prefers reduced motion – if yes, skip effect
+  if (window.innerWidth < 768) return;
+
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   if (prefersReducedMotion.matches) return;
-
   // Configuration (edit these values as you like)
   const CONFIG = {
     color: 'rgba(200, 241, 53, 0.4)',   // 40% opacity      // accent color (same as your theme)
