@@ -13,7 +13,7 @@ This portfolio showcases my projects, skills, and journey in tech 💻✨
 👉 [CLICK HERE TO VIEW THE WEBSITE](https://zoz-salah.github.io/My-personal-portfolio-website/)
 ---
 
-## 🧠 About Me
+## 🧠 About Me...
 
 * 🎓 Computer Science Student
 * 🤖 Interested in AI & Machine Learning
