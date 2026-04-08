@@ -93,6 +93,128 @@ const observer = new IntersectionObserver((entries) => {
 animatables.forEach(el => observer.observe(el));
 
 
+
+// ─── ANIMATED GREETING (cycles through languages then stops) ───
+(function() {
+  const greetings = [
+    "Hello",      // English
+    "Hola",       // Spanish
+    "Ciao",       // Italian
+    "Bonjour",    // French
+    "Konnichiwa", // Japanese
+    "Guten Tag",  // German
+    "Ni Hao",     // Chinese
+    "Namaste",    // Hindi
+    "Olá",        // Portuguese
+    "اهلا",       // Arabic
+    "Hello"       // back to English (final)
+  ];
+
+  let index = 0;
+  const greetingSpan = document.getElementById('animated-greeting');
+  if (!greetingSpan) return;
+
+  const intervalTime = 250; // milliseconds between changes (adjust for speed)
+  const interval = setInterval(() => {
+    greetingSpan.textContent = greetings[index];
+    index++;
+    if (index >= greetings.length) {
+      clearInterval(interval); // stop animation
+    }
+  }, intervalTime);
+})();
+
+
+// ─── CUSTOM CURSOR (smooth trailing dot) ───────────────────
+(function() {
+  // Check if user prefers reduced motion – if yes, skip effect
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (prefersReducedMotion.matches) return;
+
+  // Configuration (edit these values as you like)
+  const CONFIG = {
+    color: 'rgba(200, 241, 53, 0.4)',   // 40% opacity      // accent color (same as your theme)
+    dotSize: 8,            // radius of the dot in pixels
+    lag: 12,               // higher = more lag / smoother trailing
+    zIndex: 9999
+  };
+
+  let canvas, ctx;
+  let width = window.innerWidth;
+  let height = window.innerHeight;
+  let cursor = { x: width / 2, y: height / 2 };
+
+  class Dot {
+    constructor(x, y, size, lag) {
+      this.pos = { x, y };
+      this.size = size;
+      this.lag = lag;
+    }
+
+    moveTowards(targetX, targetY, context) {
+      // Ease towards cursor position
+      this.pos.x += (targetX - this.pos.x) / this.lag;
+      this.pos.y += (targetY - this.pos.y) / this.lag;
+
+      context.fillStyle = CONFIG.color;
+      context.beginPath();
+      context.arc(this.pos.x, this.pos.y, this.size, 0, Math.PI * 2);
+      context.fill();
+    }
+  }
+
+  const dot = new Dot(width / 2, height / 2, CONFIG.dotSize, CONFIG.lag);
+
+  function onMouseMove(e) {
+    cursor.x = e.clientX;
+    cursor.y = e.clientY;
+  }
+
+  function onWindowResize() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    if (canvas) {
+      canvas.width = width;
+      canvas.height = height;
+    }
+  }
+
+  function updateAndDraw() {
+    if (!ctx) return;
+    ctx.clearRect(0, 0, width, height);
+    dot.moveTowards(cursor.x, cursor.y, ctx);
+  }
+
+  function animate() {
+    updateAndDraw();
+    requestAnimationFrame(animate);
+  }
+
+  function init() {
+    canvas = document.createElement('canvas');
+    canvas.id = 'custom-cursor-canvas';
+    ctx = canvas.getContext('2d');
+
+    canvas.style.position = 'fixed';
+    canvas.style.top = '0';
+    canvas.style.left = '0';
+    canvas.style.pointerEvents = 'none';
+    canvas.style.zIndex = CONFIG.zIndex;
+    canvas.width = width;
+    canvas.height = height;
+
+    document.body.appendChild(canvas);
+
+    window.addEventListener('mousemove', onMouseMove);
+    window.addEventListener('resize', onWindowResize);
+
+    animate();
+  }
+
+  init();
+})();
+
+
 // ─── CONTACT FORM (demo handler) ────────────────────────────
 // function handleFormSubmit(e) {
 //   e.preventDefault();
