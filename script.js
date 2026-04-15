@@ -72,7 +72,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // ─── SCROLL-TRIGGERED ANIMATIONS ────────────────────────────
 // Elements with [data-animate] fade in when they enter the viewport
-const animatables = document.querySelectorAll('[data-animate], .timeline-item, .project-card');
+const animatables = document.querySelectorAll('[data-animate], .timeline-item, .project-card, .cert-card');
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {

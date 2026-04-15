@@ -588,6 +588,125 @@ font-family: 'verdana', sans-serif;
 }
 .project-link:hover { opacity: 0.7; }
 
+/* ─── CERTIFICATES ──────────────────────────────────────────── */
+.certificates { background: var(--bg-card); }
+
+/* Grid layout — same rhythm as projects-grid */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+/* The outer anchor is the clickable card wrapper */
+.cert-card {
+  display: block;
+  height: 320px;
+  perspective: 1000px;   /* depth for the 3-D flip */
+  cursor: pointer;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.cert-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* The inner wrapper rotates on hover */
+.cert-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: var(--radius);
+}
+.cert-card:hover .cert-inner {
+  transform: rotateY(180deg);
+}
+
+/* Shared face styles */
+.cert-front,
+.cert-back {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  overflow: hidden;
+}
+
+/* ── FRONT: certificate image ── */
+.cert-front {
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+.cert-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.cert-card:hover .cert-img {
+  transform: scale(1.04);
+}
+
+/* Small "Click to view" label at the bottom of the front */
+.cert-front-label {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 10px 16px;
+  background: linear-gradient(to top, rgba(13,15,20,0.85), transparent);
+  font-size: 0.75rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ── BACK: certificate details ── */
+.cert-back {
+  background: var(--bg-hover);
+  border: 1px solid rgba(200, 241, 53, 0.25);
+  transform: rotateY(180deg);     /* starts face-down, shows after flip */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.cert-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.cert-issuer {
+  font-size: 0.85rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.cert-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.cert-level {
+  margin-top: 4px;
+}
+
 /* ─── CONTACT ───────────────────────────────────────────────── */
 .contact { background: var(--bg-card); }
 
@@ -743,6 +862,7 @@ font-family: 'verdana', sans-serif;
   .hero-cta { justify-content: center; }
 
   .about-grid { grid-template-columns: 1fr; gap: 48px; }
+  .cert-grid { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
   .contact-grid { grid-template-columns: 1fr; gap: 48px; }
 }
 
@@ -792,6 +912,8 @@ font-family: 'verdana', sans-serif;
   .hero-cta .btn { width: 100%; justify-content: center; }
 
   .about-stats { gap: 28px; }
+
+  .cert-card { height: 280px; }
 
   .footer-inner { flex-direction: column; align-items: flex-start; }
 }
