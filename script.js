@@ -114,7 +114,7 @@ animatables.forEach(el => observer.observe(el));
   const greetingSpan = document.getElementById('animated-greeting');
   if (!greetingSpan) return;
 
-  const intervalTime = 250; // milliseconds between changes (adjust for speed)
+  const intervalTime = 200; // milliseconds between changes (adjust for speed)
   const interval = setInterval(() => {
     greetingSpan.textContent = greetings[index];
     index++;
