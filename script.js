@@ -125,6 +125,15 @@ animatables.forEach(el => observer.observe(el));
 })();
 
 
+// ── Parallax Canvas ───────────────────────────────────────────
+(function(){
+  const canvas=document.getElementById('bg-canvas');
+  const ctx=canvas.getContext('2d');
+  let W,H,particles=[];
+  let mouseX=0,mouseY=0;
+  // ... باقي الكود
+})();
+
 // ─── CUSTOM CURSOR (smooth trailing dot) ───────────────────
 (function() {
   if (window.innerWidth < 768) return;
